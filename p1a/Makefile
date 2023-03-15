@@ -4,9 +4,12 @@ ssh:
 up:
 	vagrant up
 
+status:
+	vagrant status
+
 clean:
 	vagrant destroy -f
 	rm node-token
 
-.PHONY: clean up
-.SILENT: clean up
+.PHONY:
+.SILENT: clean up ssh status
