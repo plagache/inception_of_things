@@ -11,4 +11,6 @@ clean:
 	vagrant destroy -f
 	rm node-token
 
+re: clean up
+
 .SILENT: clean up ssh status

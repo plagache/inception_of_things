@@ -1,5 +1,5 @@
 ssh:
-	vagrant ssh $$(vagrant status | grep "running" | fzy | cut -d' ' -f1)
+	vagrant ssh
 
 up:
 	vagrant up
@@ -9,5 +9,7 @@ status:
 
 clean:
 	vagrant destroy -f
+
+re: clean up
 
 .SILENT: clean up ssh status
