@@ -1,3 +1,5 @@
 .vagrant/
 node-token
 *.log
+kubectl
+kubectl.sha256
