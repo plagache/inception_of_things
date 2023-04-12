@@ -3,3 +3,4 @@ node-token
 *.log
 kubectl
 kubectl.sha256
+k3d.sh
