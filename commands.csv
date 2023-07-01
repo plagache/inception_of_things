@@ -1,0 +1,5 @@
+sudo apt update
+sudo apt dist-upgrade
+vagrant --version
+vagrant plugin install vagrant-libvirt
+sudo usermod -aG libvirt $USER

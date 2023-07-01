@@ -1,0 +1,17 @@
+make
+clang
+gcc
+qemu
+ebtables
+libvirt-daemon-system
+libvirt-clients
+dnsmasq-base
+vagrant
+vagrant-libvirt
+libxslt-dev
+libxml2-dev
+libvirt-dev
+zlib1g-dev
+ruby-dev
+fzy
+tmux
