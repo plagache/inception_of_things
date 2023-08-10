@@ -21,9 +21,14 @@ curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh > k3d.sh &&
 chmod +x k3d.sh
 ./k3d.sh
 
+mkdir -p ~/.kube/
+k3d cluster create new-cluster
+k3d kubeconfig merge new-cluster -d -s
+
 #argoCD install
+curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
+rm argocd-linux-amd64
+
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-
-# sudo cp cert.crt /usr/local/share/ca-certificates
-sudo update-ca-certificates
