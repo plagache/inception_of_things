@@ -21,23 +21,9 @@ curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh > k3d.sh &&
 chmod +x k3d.sh
 ./k3d.sh
 
-#argoCD requirements
-sudo snap install microk8s --classic
-sudo usermod -a -G microk8s $USER
-mkdir -p $HOME/.kube
-sudo cp -i /root/.kube/config $HOME/.kube/config
-sudo chown -R resu ~/.kube
-#RELOG
-microk8s enable dns && microk8s stop && microk8s start
-
 #argoCD install
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-
-#Howbrew install
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-#argoCD CLI install
-brew install argocd
 
 # sudo cp cert.crt /usr/local/share/ca-certificates
 sudo update-ca-certificates
