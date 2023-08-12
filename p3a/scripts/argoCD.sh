@@ -3,11 +3,13 @@ kubectl create namespace dev
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
+#In another terminal foward
+cat 'kubectl port-forward svc/argocd-server -n argocd 8080:443\nin another terminal to access webUI'
+
+sleep 10
+
 #Get password
 argocd admin initial-password -n argocd
-
-#In another terminal foward
-cat 'kubectl port-forward svc/argocd-server -n argocd 8080:443\nto access webUI'
 
 #Login
 argocd login localhost:8080
