@@ -3,8 +3,7 @@ kubectl create namespace dev
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-sleep 2; argocd admin initial-password -n argocd &> /dev/null;
-
+argocd admin initial-password -n argocd &> /dev/null
 while [ "$?" -ne 0 ]; do sleep 2; argocd admin initial-password -n argocd &> /dev/null; done
 
 argocd admin initial-password -n argocd
