@@ -12,8 +12,3 @@ printf '\nPassword:\n'
 argocd admin initial-password -n argocd
 
 printf '\nRun this command in another shell:\n\nkubectl port-forward svc/argocd-server -n argocd 8080:443\n\nto be able to login with:\n\nargocd login localhost:8080\n\n'
-
-#argocd app create coolapp --repo $REPOURL --path coolapp --dest-server https://kubernetes.default.svc --dest-namespace dev
-#argocd app get coolapp
-#argocd app sync guestbook
-#kubectl port-forward svc/coolapp -n dev 4242:8888
