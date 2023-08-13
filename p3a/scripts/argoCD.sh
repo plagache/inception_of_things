@@ -8,10 +8,7 @@ while [ "$?" -ne 0 ]; do sleep 2; argocd admin initial-password -n argocd &> /de
 
 argocd admin initial-password -n argocd
 
-# foward port to connect
-kubectl port-forward svc/argocd-server -n argocd 8080:443 &> redirect.log &
-#Login
-argocd login localhost:8080
+printf 'Run this command in another shell:\nkubectl port-forward svc/argocd-server -n argocd 8080:443\n to be able to login with:\nargocd login localhost:8080'
 
 #argocd app create coolapp --repo $REPOURL --path coolapp --dest-server https://kubernetes.default.svc --dest-namespace dev
 #argocd app get coolapp
