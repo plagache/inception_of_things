@@ -12,6 +12,6 @@ printf "\n$APPPATH Runing\n"
 LOCALPORT=4242
 CONTAINERPORT=8888
 
-kubectl port-forward svc/cool-app -n dev $LOCALPORT:$CONTAINERPORT > /dev/null &
+kubectl port-forward svc/cool-app -n dev $LOCALPORT:$CONTAINERPORT > /dev/null 2>&1 &
 
 curl localhost:$LOCALPORT

@@ -14,6 +14,6 @@ PASSWORD=$(argocd admin initial-password -n argocd)
 LOCALPORT=24242
 CONTAINERPORT=443
 
-kubectl port-forward svc/argocd-server -n argocd $LOCALPORT:$CONTAINERPORT > /dev/null &
+kubectl port-forward svc/argocd-server -n argocd $LOCALPORT:$CONTAINERPORT > /dev/null 2>&1 &
 
 argocd login localhost:$LOCALPORT --insecure --username admin --password $PASSWORD
