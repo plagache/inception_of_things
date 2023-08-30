@@ -5,7 +5,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 printf "\n"
 counter=0
-argocd admin initial-password -n argocd &> /dev/null
+false
 while [ "$?" -ne 0 ]; do printf "\rwaiting for argocd to boot up $counter"; ((counter++));sleep 1; argocd admin initial-password -n argocd &> /dev/null; done
 
 

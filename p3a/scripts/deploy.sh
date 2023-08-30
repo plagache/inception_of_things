@@ -6,6 +6,7 @@ argocd app get coolapp
 argocd app sync coolapp
 
 printf "\nNOT runing yet\n"
+false
 while [ "$?" -ne 0 ]; do printf "\rwaiting for $APPPATH to boot up $counter"; ((counter++));sleep 1; kubectl get pods -n dev | grep cool-app | grep Running; done
 
 printf "\nRuning\n"
