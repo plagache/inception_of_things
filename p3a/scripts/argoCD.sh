@@ -10,7 +10,10 @@ while [ "$?" -ne 0 ]; do printf "\rwaiting for argocd to boot up $counter"; ((co
 
 
 PASSWORD=$(argocd admin initial-password -n argocd)
-printf "\nadmin password:\n$PASSWORD\n"
+# printf "\nadmin password:\n$PASSWORD\n"
 LOCALPORT=24242
 CONTAINERPORT=443
-printf "\nRun this command in another shell:\n\nkubectl port-forward svc/argocd-server -n argocd $LOCALPORT:$CONTAINERPORT\n\nto be able to login with:\n\nargocd login localhost:$LOCALPORT --insecure --username admin --password $PASSWORD\n\n"
+
+kubectl port-forward svc/argocd-server -n argocd $LOCALPORT:$CONTAINERPORT &> /dev/null
+
+argocd login localhost:$LOCALPORT --insecure --username admin --password $PASSWORD
