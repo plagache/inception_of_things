@@ -7,4 +7,4 @@ argocd app sync coolapp
 
 LOCALPORT=4242
 CONTAINERPORT=8888
-printf "\nRun this command in another shell:\n\nkubectl port-forward svc/coolapp -n dev $LOCALPORT:$CONTAINERPORT\n\nto be able to connect to the app with:\n\ncurl localhost:$LOCALPORT\n\n"
+printf "\nRun this command in another shell:\n\nkubectl port-forward svc/cool-app -n dev $LOCALPORT:$CONTAINERPORT\n\nto be able to connect to the app with:\n\ncurl localhost:$LOCALPORT\n\n"
