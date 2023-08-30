@@ -9,8 +9,7 @@ false
 while [ "$?" -ne 0 ]; do printf "\rwaiting for argocd to boot up $counter"; ((counter++));sleep 1; argocd admin initial-password -n argocd &> /dev/null; done
 
 
-PASSWORD=$(argocd admin initial-password -n argocd)
-# printf "\nadmin password:\n$PASSWORD\n"
+PASSWORD=$(argocd admin initial-password -n argocd | head -n 1)
 LOCALPORT=24242
 CONTAINERPORT=443
 
