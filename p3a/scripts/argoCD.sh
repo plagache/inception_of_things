@@ -16,4 +16,7 @@ CONTAINERPORT=443
 
 nohup kubectl port-forward svc/argocd-server -n argocd $LOCALPORT:$CONTAINERPORT > /dev/null 2>&1 &
 
-sleep 5 ;argocd login localhost:$LOCALPORT --insecure --username admin --password $PASSWORD; sleep 5
+false
+while [ "$?" -ne 0 ]; do sleep 1; curl localhost:$LOCALPORT &> /dev/null; done
+
+argocd login localhost:$LOCALPORT --insecure --username admin --password $PASSWORD
