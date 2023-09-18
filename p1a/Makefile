@@ -1,5 +1,11 @@
-ssh:
-	vagrant ssh $$(vagrant status | grep "running" | fzy | cut -d' ' -f1)
+install:
+	./scripts/install.sh
+
+sshserver:
+	vagrant ssh alagacheS
+
+sshworker:
+	vagrant ssh alagacheSW
 
 up:
 	vagrant up
