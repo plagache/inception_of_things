@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Has to be run before anything else
-# but normaly it will be already installed
+# We need to setup the vm first
 
-sudo apt update && sudo apt upgrade && sudo apt install -y git curl make ripgrep
+sudo apt update && sudo apt upgrade && sudo apt install -y git curl make ripgrep fd-find
