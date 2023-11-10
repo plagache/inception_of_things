@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Has to be run before anything else
+# but normaly it will be already installed
+
+sudo apt update && sudo apt upgrade && sudo apt install -y git curl make ripgrep
