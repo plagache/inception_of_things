@@ -2,7 +2,9 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/jammy64"
+  # config.vm.box = "ubuntu/jammy64"
+  # ubuntu does not comply with eth1
+  config.vm.box = "debian/bookworm64"
 
   # a synced folder to share info between the vms
   config.vm.synced_folder ".", "/vagrant"

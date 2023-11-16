@@ -2,4 +2,4 @@
 
 # We need to setup the vm first
 
-sudo apt update && sudo apt upgrade && sudo apt install -y git curl make ripgrep fd-find
+sudo apt update && sudo apt upgrade && sudo apt install -y git curl make vim ripgrep fd-find
