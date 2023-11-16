@@ -18,6 +18,6 @@ sudo apt install -y git curl make vim ripgrep fd-find
 
 ### Part 1
 
-[p1_schemas](/images/p1.png)
+![p1_schemas](/images/p1.png)
 ### Part 2
 ### Part 3
