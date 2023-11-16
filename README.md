@@ -1,6 +1,21 @@
 # Inception Of Things
 
 ## Getting started
-- [ ] install k3s on vm
+
+### Setup VM
+
+- [x] installation with libvirt/qemu
+- [x] updating the VM:
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+- [x] installing various utility:
+```bash
+sudo apt install -y git curl make vim ripgrep fd-find
+```
+
 - [ ] draw schemas of sandbox for each part
-- [ ] TBD
+
+### Part 1
+### Part 2
+### Part 3
