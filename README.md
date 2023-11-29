@@ -19,5 +19,39 @@ sudo apt install -y git curl make vim ripgrep fd-find
 ### Part 1
 
 ![p1_schemas](/images/p1.png)
+
+```bash
+ip a
+```
+
+```bash
+kubectl get nodes -o wide
+```
+
 ### Part 2
+
+```bash
+kubectl get all
+```
+
+```bash
+curl -H "Host:app1.com" 192.168.56.110
+```
+
+```bash
+curl -H "Host:app2.com" 192.168.56.110
+```
+
+```bash
+curl 192.168.56.110
+```
+
 ### Part 3
+
+```bash
+kubectl get all -n dev
+```
+
+```bash
+kubectl get pods -n dev
+```
