@@ -1,14 +1,4 @@
 #!/bin/bash
-
-APPPATH="coolapp"
-
-argocd app sync coolapp
-
-false
-while [ "$?" -ne 0 ]; do printf "\rwaiting for $APPPATH to boot up $counter"; ((counter++));sleep 1; kubectl get pods -n dev | grep cool-app | grep Running &> /dev/null; done
-
-printf "\n$APPPATH Runing\n"
-
 LOCALPORT=4242
 CONTAINERPORT=8888
 
