@@ -16,7 +16,10 @@ sudo apt install -y git curl make vim ripgrep fd-find
 
 - [ ] draw schemas of sandbox for each part
 
+---
+
 ### Part 1
+
 
 ![p1_schemas](/images/p1.png)
 
@@ -28,9 +31,11 @@ ip a
 kubectl get nodes -o wide
 ```
 
+---
+
+
 ### Part 2
 
-![Part 2](/p2a/README.md)
 
 ```bash
 kubectl get all
@@ -48,12 +53,23 @@ curl -H "Host:app2.com" 192.168.56.110
 curl 192.168.56.110
 ```
 
+---
+
 ### Part 3
+
+
+```bash
+./install.sh
+./reload-cluster.sh
+./argoCD.sh
+./deploy.sh
+./check_deployment.sh
+```
 
 ```bash
 kubectl get all -n dev
-```
-
-```bash
 kubectl get pods -n dev
 ```
+
+---
+
