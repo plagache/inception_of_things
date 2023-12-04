@@ -57,17 +57,17 @@ curl 192.168.56.110
 
 ### Part 3
 
-
-```bash
-./install.sh
-./reload-cluster.sh
-./argoCD.sh
-./deploy.sh
-./check_deployment.sh
-```
+- install  Docker, kubectl, k3d, argoCD: `./install.sh`
+- reload k3d clusters: `./reload-cluster.sh`
+- create namespace, login in argoCD: `./argoCD.sh`
+- deploy the application with argoCD: `./deploy.sh`
+- we can now check wich application is running with: `./check_deployment.sh`
 
 ```bash
 kubectl get all -n dev
+```
+
+```bash
 kubectl get pods -n dev
 ```
 
