@@ -30,6 +30,8 @@ kubectl get nodes -o wide
 
 ### Part 2
 
+![Part 2](/p2a/README.md)
+
 ```bash
 kubectl get all
 ```
