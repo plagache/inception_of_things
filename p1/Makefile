@@ -15,7 +15,7 @@ status:
 
 clean:
 	vagrant destroy -f
-	rm node-token
+	rm -f node-token
 
 re: clean up
 
