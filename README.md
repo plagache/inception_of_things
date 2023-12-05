@@ -14,8 +14,6 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y git curl make vim ripgrep fd-find
 ```
 
-- [ ] draw schemas of sandbox for each part
-
 ---
 
 ### Part 1
@@ -57,11 +55,30 @@ curl 192.168.56.110
 
 ### Part 3
 
-- install  Docker, kubectl, k3d, argoCD: `./install.sh`
-- reload k3d clusters: `./reload-cluster.sh`
-- create namespace, login in argoCD: `./argoCD.sh`
-- deploy the application with argoCD: `./deploy.sh`
-- we can now check wich application is running with: `./check_deployment.sh`
+- install  Docker, kubectl, k3d, argoCD:
+```bash
+./install.sh
+```
+
+- reload k3d clusters:
+```bash
+./reload-cluster.sh
+```
+
+- create namespace, login in argoCD:
+```bash
+./argoCD.sh
+```
+
+- deploy the application with argoCD:
+```bash
+./deploy.sh
+```
+
+- we can now check wich version of the application is running with:
+```bash
+./check_deployment.sh
+```
 
 ```bash
 kubectl get all -n dev
@@ -70,6 +87,3 @@ kubectl get all -n dev
 ```bash
 kubectl get pods -n dev
 ```
-
----
-
